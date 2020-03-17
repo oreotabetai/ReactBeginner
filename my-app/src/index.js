@@ -1,24 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 
-function formatName(user) {
-    return user.firstName + ' ' + user.lastName;
+// コンポーネントは大文字で始める
+function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
 }
 
-//JSX 記法
-const user = {
-    firstName: 'Harper',
-    lastName: 'Perez'
-};
-
-const element = (
-    <h1>
-        Hello, {formatName(user)}!
-    </h1>
-);
+const element = <Welcome name="sara" />;
 
 ReactDOM.render(
     element,
-    // index.html の root
     document.getElementById('root')
 );
